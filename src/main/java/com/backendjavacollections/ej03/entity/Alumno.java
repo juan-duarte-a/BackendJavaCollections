@@ -1,20 +1,36 @@
 package com.backendjavacollections.ej03.entity;
 
+import java.util.List;
+
 public class Alumno {
     
-    private final int nota;
+    private String nombre;
+    private List<Double> notas;
 
-    public Alumno(int nota) {
-        this.nota = nota;
+    public Alumno(String nombre, List<Double> notas) {
+        this.nombre = nombre;
+        this.notas = notas;
     }
 
-    public int getNota() {
-        return nota;
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public List<Double> getNotas() {
+        return notas;
+    }
+
+    public void setNotas(List<Double> notas) {
+        this.notas = notas;
     }
     
     @Override
     public String toString() {
-        return "" + nota;
+        return nombre;
     }
     
 }
